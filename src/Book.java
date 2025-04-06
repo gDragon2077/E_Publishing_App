@@ -1,103 +1,54 @@
 import java.util.List;
 import java.util.Objects;
-
+// Partea de review-uri o sa fie modificata.
 public class Book {
-    /// Variable Definition
+    // In clasa doar se stocheaza data, corectitudinea acestora se verifica doar in clasa din care se citesc datele sau in eventualitatea unei clase de verificare.
     private final String title;
-    private final List<String> authors;
-    private final int publicationYear;
-    private final int numberPages;
-    private final double price;
-    private final String deliveryPeriod;
-    private final List<String> reviews;
+    private final String author;
+    private final int nrOfPages;
+    private final int releaseYear;
+    private double price;
+    private int deliveryPeriod;
+    private List<String> reviews;
 
-    /// Class Constructor
-    public Book(String title, List<String> authors, int publicationYear, int numberPages, double price, String deliveryPeriod, List<String> reviews){
-        // Validate Date Constructor
-        if(title == null || title.trim().isEmpty()){
-            throw new IllegalArgumentException("Title cannot be null or empty!");
-        }
-        if(authors == null || authors.isEmpty()){
-            throw new IllegalArgumentException("Author(s) cannot be null or empty!");
-        }
-        if(numberPages <= 0){
-            throw new IllegalArgumentException("Number of pages must be positive!");
-        }
-        if(publicationYear <= 0){
-            throw new IllegalArgumentException("Publication year must be positive!");
-        }
-        if(price < 0){
-            throw new IllegalArgumentException("Price must be positive or zero!");
-        }
-        if(deliveryPeriod == null || deliveryPeriod.trim().isEmpty()){
-            throw new IllegalArgumentException("Delivery period cannot be null or empty!");
-        }
-
-        // if is ok.
+    // Constructor pentru intierea cartii
+    Book(String title, String author, int nrOfPages, int releaseYear, int deliveryPeriod, double price, List<String> reviews){
         this.title = title;
-        this.authors = List.copyOf(authors);
-        this.publicationYear = publicationYear;
-        this.numberPages = numberPages;
-        this.price = price;
+        this.author = author;
+        this.nrOfPages = nrOfPages;
+        this.releaseYear = releaseYear;
         this.deliveryPeriod = deliveryPeriod;
-        this.reviews = (reviews != null) ? List.copyOf(reviews) : List.of();
+        this.price = price;
+        this.reviews = List.copyOf(reviews);
     }
 
-    /// Get Functions
-    public String getTitle(){
-        return title;
-    }
-    public List<String> getAuthors(){
-        return authors;
-    }
-    public String getDeliveryPeriod(){
-        return deliveryPeriod;
-    }
+    /// Getters
     public List<String> getReviews(){
         return reviews;
-    }
-    public int getPublicationYear(){
-        return publicationYear;
-    }
-    public int getNumberPages(){
-        return numberPages;
     }
     public double getPrice(){
         return price;
     }
 
-    /// To make a summary of the book
+    /// Setters
+    public void setReviews(List<String> reviews){
+        this.reviews = List.copyOf(reviews);
+    }
+
     @Override
     public String toString(){
         return "Book{" +
                 "title='" + title + '\'' +
-                ", authors=" + authors +
-                ", publicationYear=" + publicationYear +
-                ", numberPages=" + numberPages +
+                ", authors=" + author +
+                ", publicationYear=" + releaseYear +
+                ", numberPages=" + nrOfPages +
                 ", price=" + price +
                 ", deliveryPeriod='" + deliveryPeriod + '\'' +
-                ", reviews=" + reviews +
                 '}';
     }
 
-    /// To see if two books are identical
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Book book = (Book) o;
-        return publicationYear == book.publicationYear &&
-                numberPages == book.numberPages &&
-                Double.compare(book.price, price) == 0 &&
-                Objects.equals(title, book.title) &&
-                Objects.equals(authors, book.authors) &&
-                Objects.equals(deliveryPeriod, book.deliveryPeriod) &&
-                Objects.equals(reviews, book.reviews);
-    }
-
-    /// Hash code for this book
-    @Override
-    public int hashCode() {
-        return Objects.hash(title, authors, publicationYear, numberPages, price, deliveryPeriod, reviews);
+    public int hashCode(){
+        return Objects.hash(title, author, releaseYear, nrOfPages); // Pretul, durata de licrare cat si review-urile se exclud deoarece sunt variabile schimbatoare.
     }
 }
