@@ -1,0 +1,28 @@
+==============================================
+                   E-Editura SRL               
+            Factura Proforma - FCT20250615185203
+==============================================
+------------------------------------------------
+Client:
+  Nume: gabriel gabriel
+  Adresa: gabriel
+------------------------------------------------
+Nr.   Denumire produs                          UM    Cant.      Pret         Valoare      TVA 19%   
+------------------------------------------------
+1     Clean Code                               buc   3          45,50        136,50       25,93     
+2     Effective Java                           buc   4          52,00        208,00       39,52     
+3     Design Patterns                          buc   1          60,00        60,00        11,40     
+4     The Pragmatic Programmer                 buc   2          40,00        80,00        15,20     
+5     Head First Java                          buc   24         38,00        912,00       173,28    
+6     Java Concurrency in Practice             buc   50         48,50        2425,00      460,75    
+------------------------------------------------
+Total fara TVA:                                       3821,50
+TVA 19%:                                               726,09
+Total de plata:                                       4547,59
+
+Plata cu card:
+  Titular: gabriel gabriel
+  Card: **** **** **** 8632
+==============================================
+Multumim pentru comanda!
+==============================================
