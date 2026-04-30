@@ -1,0 +1,23 @@
+==============================================
+                   E-Editura SRL               
+            Factura Proforma - FCT20250615184813
+==============================================
+------------------------------------------------
+Client:
+  Nume: Satnoianu Gabriel
+  Adresa: Strada I.G. Duca 10a
+------------------------------------------------
+Nr.   Denumire produs                          UM    Cant.      Pret         Valoare      TVA 19%   
+------------------------------------------------
+1     The Pragmatic Programmer                 buc   5          40,00        200,00       38,00     
+------------------------------------------------
+Total fara TVA:                                        200,00
+TVA 19%:                                                38,00
+Total de plata:                                        238,00
+
+Plata cu card:
+  Titular: Satnoianu Gabriel
+  Card: **** **** **** 8632
+==============================================
+Multumim pentru comanda!
+==============================================

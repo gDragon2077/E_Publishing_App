@@ -1,0 +1,7 @@
+Title,Author,Year,Pages,Price,DeliveryTime,Review1,Review2,Review3,Review4,Review5
+Clean Code,Robert C. Martin,2008,464,45.5,3,Great reference,Clean structure,Highly recommended,Must read,Very practical,1.jpg
+Effective Java,Joshua Bloch,2018,416,52.0,2,Well written,Deep insights,A must-have,Advanced concepts,Useful examples,2.jpg
+The Pragmatic Programmer,Andrew Hunt & David Thomas,1999,352,40.0,4,Classic book,Still relevant,Very practical,Concise and clear,Timeless advice,3.jpg
+Design Patterns,Erich Gamma et al.,1994,395,60.0,5,Hard to read but worth it,Foundational concepts,Real-world use cases,Detailed explanations,Excellent,4.jpg
+Java Concurrency in Practice,Brian Goetz,2006,384,48.5,3,Complex but useful,Great for threading,Covers tricky parts,Critical for back-end devs,Well structured,5.jpg
+Head First Java,Kathy Sierra & Bert Bates,2005,688,38.0,4,Easy to follow,Fun and visual,Beginner-friendly,Great for self-study,Helpful exercises,6.jpg
